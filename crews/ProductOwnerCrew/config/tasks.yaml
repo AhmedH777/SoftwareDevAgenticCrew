@@ -1,0 +1,23 @@
+chief_product_owner_task:
+  description: >
+    Product Owner has provided you with a list of software files with software components that need to be implemented in {programming_language} based on the software_blocks provided by the Architect.
+    the software blocks provided by the Architect are:
+      {software_blocks}
+    Analyze the list of files and their software components and ensure that they meet the requirements and are coherent.
+  expected_output: >
+    A refined list of software files with their software components that need to be implemented in {programming_language} based on the software_blocks provided by the Architect.
+    You should add only Software related blocks , ignoring documentation and testing blocks.
+  agent: chief_product_owner
+  
+product_owner_task:
+  description: >
+    Architecht has provided you with a list of software_blocks that needs to be implemented in {programming_language}.
+    The software blocks provided by the Architecht are:
+      {software_blocks}
+    
+    Break down the software_blocks into software files that can be implemented in {programming_language} by the developer where each file consists of software components.
+    software compomnents can be functions, classes, or any other software_blocks that can be implemented in {programming_language}.
+  expected_output: >
+    A list of software files with software componenets for each file that can be implemented in {programming_language} based on the software blocks provided by the Architecht.
+    You should add only Software related blocks , ignoring documentation and testing blocks.
+  agent: product_owner

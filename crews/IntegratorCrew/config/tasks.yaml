@@ -1,0 +1,39 @@
+integrator_task:
+  description: >
+    Software Development team has written software files as part of the project.
+    The project is written in {programming_language} with the aim to satisfy the client's requirements.
+
+    The client requirements are:
+     {client_requirements}
+    
+    The Architect has defined the software architecture as follows:
+      {software_architecture}
+    
+    Then the product owner has define the software files to be written by the development team as follows:
+      {software_files}
+
+    The project files with the files written by Software Development team is in this directory:
+      {project_files_directory}
+    
+    Your task is to re write the project files written by the Developer team and make sure all the files are well integrated and work as a whole based on the software architecture defined by the Architect and the Software design defined by the Product Owner.
+
+    Your Integration process should consider the following points:
+      - Identify and resolve any inconsistencies between the user requirements, architectural specifications, and individual file implementations.
+      - Make sure that all software components (functions , classes, .. etc) are used as per the software architecture and product owner design.
+      - Make sure all modules and files interface correctly, with no naming conflicts or mismatched data formats.
+      - Make sure that each file adheres to the overall project architecture and contributes to a cohesive, functional system.
+      - Make sure that all project components align with the product owner's specifications and the intended division of responsibilities.
+      - Make sure the final integrated project to confirm it builds successfully, passes all tests, and meets the outlined requirements.
+      - Make sure that every class is instantiated at least once and that all class attributes are actively referenced.
+      - Make sure that all class attributes are initialized and updated as needed throughout the project.
+      - Make sure that all defined functions are called or used within the project and ensure no functions remain unused.
+      - Make sure that each class attribute and function serves a clear purpose and contributes to the project's functionality.
+      - Make sure that all defined classes, attributes, and functions appear in the final project's logic or workflows.
+      - Make sure that the project's structure and organization align with the intended architecture and design principles.
+      - Make sure that the project's dependencies are correctly defined and that all required libraries are included.
+      
+  expected_output: >
+    Fully functional and well integrated project's software files in {programming_language} based on the software architecture defined by the Architect and the software design defined by the Product Owner.
+    and save the code files locally using save_integrated_code tool.
+    Must have a clear main file that runs the project and demonstrates the project's functionality.
+  agent: integrator

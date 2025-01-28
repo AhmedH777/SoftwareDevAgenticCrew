@@ -1,0 +1,22 @@
+chief_architect_task:
+  description: >
+    You are the Chief Architect for the project. You have been provided with a list of architecture blocks that will be used by the Product Owner to break down and implemented by the Developer.
+    You are responsible for analyzing the list of architecture blocks provided by the Architect and ensuring that they meet the requirements and are coherent.
+    The user request to implement software project in {programming_language} .
+    The user requirements are as follows:
+      {requirements}
+  expected_output: >
+    Refined and improved list of architecture blocks that can be used by the Product Owner to break down and implemented by the Developer in {programming_language}.
+    You shouldnt add expect Software related blocks , ignoring documentation and testing blocks.
+  agent: chief_architect
+  
+architect_task:
+  description: >
+    You are the designated Architect for the project. You have been provided with the customer requirements for a new software block that needs to be implemented in {programming_language}.
+    You are the first contact with the user and you are responsible for providing a list of architecture blocks that will be used by the Product Owner to break down and implemented by the Developer.
+    The user requirements are as follows:
+      {requirements}
+  expected_output: >
+    List of architecture blocks that can be used by the Product Owner to break down and implemented by the Developer in {programming_language}.
+    You shouldnt add expect Software related blocks , ignoring documentation and testing blocks.
+  agent: architect

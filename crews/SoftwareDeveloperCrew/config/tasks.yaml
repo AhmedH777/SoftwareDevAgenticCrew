@@ -1,0 +1,66 @@
+developer_task:
+  description: >
+    Product Owner has provided you with the requirements for a new software file that needs to be implemented in {programming_language}.
+    the requirements provided by the Product Owner are:
+     - Name of the software file : {software_file_name}
+     - Purpose of the software file: {purpose}
+     - Type of software compontent in the file: {software_component}
+     - Name of the software compontent in the file: {software_component_name}
+     - Description of the software component: {description}
+     - Dependencies of the software component on other components (Includes or Imports): {dependencies}
+     - Inputs: {inputs}
+     - Outputs: {outputs}
+     - Requirements: {requirements}
+     - Methods to be implemented: {methods}
+
+    Information about the project that will support the development:
+      - user_requirements : {user_requirements}
+      - break_down_of_full_project : {break_down_of_project}
+      - project_integration_considerations : {project_integration_considerations}
+
+    Write the software component based on the requirements and ensure it meets all the specified criteria.
+  expected_output: >
+    A {programming_language} software component that meets the requirements, only the code and nothing more.
+  agent: developer
+
+tester_task:
+  description: >
+    Developer Agent has provided you with a software file implemented in {programming_language}.
+    the requirements provided by the Product Owner are:
+     - Name of the software file : {software_file_name}
+     - Purpose of the software file: {purpose}
+     - Type of software compontent in the file: {software_component}
+     - Name of the software compontent in the file: {software_component_name}
+     - Description of the software component: {description}
+     - Dependencies of the software component on other components (Includes or Imports): {dependencies}
+     - Inputs: {inputs}
+     - Outputs: {outputs}
+     - Requirements: {requirements}
+     - Methods to be implemented: {methods}
+
+    Information about the project that will support the development:
+      - user_requirements : {user_requirements}
+      - break_down_of_full_project : {break_down_of_project}
+      - project_integration_considerations : {project_integration_considerations}
+
+    Ensure the software component has been implemented correctly and meets all the requirements from product owner.
+    Ensure the software component is covering all possible edge cases and scenarios.
+  expected_output: >
+    Ensure the software file is well tested and all the requirements are met.
+    Delegate the software file back to the Developer Agent if any issues are found.
+  agent: tester
+
+principal_manager_task:
+  description: >
+    Developer Agent has provided you with a software file implemented in {programming_language}.
+    Tester Agent has tested the software file and ensured it meets all the requirements.
+    Your task is to review the software file and ensure it meets all the requirements and is of high quality.
+    Ensure the software file is ready for integration into the main project.
+
+    Information about the project that will support the development:
+      - user_requirements : {user_requirements}
+      - break_down_of_full_project : {break_down_of_project}
+      - project_integration_considerations : {project_integration_considerations}
+  expected_output: >
+    A final {programming_language} software file that meets all the requirements and is of high quality.
+  agent: principal_manager
